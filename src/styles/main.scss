@@ -1,0 +1,8 @@
+// src/styles/main.scss
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+
+@use './base/buttons';
+@use './base/globals';
+@use './base/page';
+@use './base/navigation';

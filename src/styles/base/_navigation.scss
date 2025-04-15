@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as *; // ADD: Make all vars accessible
+.nav-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* or 'cover' depending on the effect */
+    display: block;
+}
+
+.nav-logo-container {
+padding: 0 23%;
+margin-bottom: 50px;
+}
+
+.primary-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 1s ease-in-out;
+}
+
+a, router-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.5rem;
+    height: 30px;
+    color: $white;
+
+    i, span {
+        transition: all 0.3s ease-in-out;
+        color: $white;      // Icon color
+    }
+    i  {
+        font-size: 1.5rem;   // Icon size
+    }
+    span {
+        font-size: 1rem;   // Icon size
+    }
+}
+
+a:hover, router-link:hover {
+    background: $white;  // Change background color on hover
+    color: $color-primary;
+    i, span {
+        transition: all 0.3s ease-in-out;
+        color: $color-primary;      // Icon color on hover
+    }
+}
+
+span {
+    font-size: 1.3rem;
+}
+
+nav {
+    padding: 40px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px; 
+    height: 100vh; 
+    background-color: $color-primary;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1); 
+    z-index: 10; 
+    transition: 0.3s ease-in-out; // ADD: smooth transition for width change
+}
+
+nav.shrunk { // ADD: shrunk state
+    .navigation-label {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      
+    .navigation-label {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .dropdown-arrow {
+        display: none;
+      }
+
+    width: 70px;
+  }
+
+link {
+    text-decoration: none;
+    color: $black;
+}
+
+
+.navigation-link {
+    color: $black;
+    text-decoration: none; 
+  }
+
+.dropdown-menu li a{
+    margin: 5px 0;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .rotated {
+    transform: rotate(180deg);
+  }
+  
+  .bx-chevron-down {
+    position: absolute;
+    right: 30px;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer; // optional for hover feedback
+  }
+  
+  .toggle-icon {
+    font-size: 2rem;
+    color: $white;
+  }

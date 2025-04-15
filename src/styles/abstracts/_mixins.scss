@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *; // ADD: Make all vars accessible
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  

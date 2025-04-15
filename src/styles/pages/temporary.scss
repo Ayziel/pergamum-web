@@ -1,0 +1,31 @@
+
+.input-box {
+    display: flex; /* Use flexbox to align items */
+    flex-direction: row; /* Align items in a row */
+    width: 76%; /* Set the desired width */
+    margin: 30px auto; /* Center the input box */
+}
+
+.input-box input {
+    flex: 1; /* Allow the input to take up available space */
+    padding: 20px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border for the input */
+    border-radius: 4px; /* Rounded corners for the input */
+}
+
+.input-box button {
+    background-color: green; /* Set button background color to green */
+    color: white; /* Set button text color to white */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-left: 10px; /* Space between input and button */
+    margin-top: 7px;
+    width: auto; /* Adjust width to fit content */
+    height: 46.5px;
+}
+
+.input-box button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}
