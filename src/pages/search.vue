@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
-const form = reactive({
+const form: Record<string, string> = reactive({
   search: '',
   docCode: '',
   category: '',
@@ -10,10 +10,13 @@ const form = reactive({
   processOwner: '',
   processOwnerName: '',
   documentApprover: '',
-  documentApproverName: ''
+  documentApproverName: '',
+  rmfName: '',
+  rmfCode: ''
 })
 
-const categories = ['HR', 'Finance', 'IT', 'Legal'] // example
+
+const categories = ['Policy', 'Procedure', 'All'] // example
 const names = ['Alice', 'Bob', 'Charlie'] // example
 
 const approvers = [
@@ -67,12 +70,23 @@ function submitForm() {
         </select>
       </div>
     </div>
-
-    <button class="save-btn" @click="submitForm">Save Changes</button>
+    <hr />
+    <div class="rmf-section">
+        <div class="rmf-name">
+            <label>RMF Name</label>
+            <input type="text" placeholder="RMF Name" v-model="form.rmfName" />
+        </div>
+        <div class="rmf-code">
+            <label>RMF Code</label>
+            <input type="text" placeholder="RMF Code" v-model="form.rmfCode" />
+        </div>
+    </div>
+    <button class="save-btn btn btn--primary" @click="submitForm">Search</button>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use '@/styles/pages/search'; 
 @use '@/styles/base/page';
+@use '@/styles/base/buttons';
 </style>

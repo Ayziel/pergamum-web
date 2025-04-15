@@ -2,15 +2,34 @@
 @use '../abstracts/mixins' as *;
 
 .btn {
+  &--primary,
+  &--secondary,
+  &--success {
+    color: $white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    white-space: nowrap; // Ensure text doesn't wrap
+    min-width: 120px; // CHANGED: Set a minimum width to prevent wrapping of two words
+
+    &:active {
+      transform: scale(0.96);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+
   &--primary {
     background: $color-primary;
-    color: $white;
-    padding: 5px 15px;
   }
 
   &--secondary {
-    background: $white;
-    color: $color-primary;
-    padding: 5px 15px;
+    background: $red;
+  }
+
+  &--success {
+    background: $green; // For the green add button
   }
 }
+
