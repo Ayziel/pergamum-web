@@ -5,24 +5,15 @@ services:
       dockerfile: Dockerfile
     container_name: pergamum_app
     ports:
-      - "5161:5001"  # CHANGED: Updated port to avoid conflict
+      - "5161:5161"
     volumes:
       - .:/app
       - /app/node_modules
-    # CHANGED: Mongo env temporarily removed
+    # Remove MONGO_URL since you're not connecting to MongoDB yet
     # environment:
     #   - MONGO_URL=mongodb://pergamum_db:27017/pergamum
-    # CHANGED: Mongo dependency removed
-    # depends_on:
-    #   - db
 
-  # db:
-  #   image: mongo:5.0
-  #   container_name: pergamum_db
-  #   ports:
-  #     - "27018:27017"
-  #   volumes:
-  #     - pergamum_mongodb_data:/data/db
+# Removed the db service since you're not using MongoDB now
 
 # volumes:
-#   pergamum_mongodb_data:
+#   pergamum_mongodb_data:  # Removed as there's no database

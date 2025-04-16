@@ -8,21 +8,23 @@ interface BoardApprovers {
   name: string
   role: string
   email: string
+  selected: boolean // ADD: selection state for checkbox
 }
+
 
 const selectAll = ref(false)
 
 const boardApprovers = reactive<BoardApprovers[]>([
-  { name: 'David Ward', role: 'IT', email: 'david.ward@example.com' }, // ADD: Random date
-  { name: 'Olivia King', role: 'Admin', email: 'olivia.king@example.com' }, // ADD: Random date
-  { name: 'James Brown', role: 'Staff', email: 'james.brown@example.com' }, // ADD: Random date
-  { name: 'Sophia Lee', role: 'IT', email: 'sophia.lee@example.com' }, // ADD: Random date
-  { name: 'Michael Scott', role: 'Admin', email: 'michael.scott@example.com' }, // ADD: Random date
-  { name: 'Emma Watson', role: 'Staff', email: 'emma.watson@example.com' }, // ADD: Random date
-  { name: 'Liam Anderson', role: 'IT', email: 'liam.anderson@example.com' }, // ADD: Random date
-  { name: 'Charlotte Davis', role: 'Staff', email: 'charlotte.davis@example.com' }, // ADD: Random date
-  { name: 'Benjamin Harris', role: 'Admin', email: 'benjamin.harris@example.com' }, // ADD: Random date
-  { name: 'Ava Moore', role: 'IT', email: 'ava.moore@example.com' }, // ADD: Random date
+  { name: 'David Ward', role: 'IT', email: 'david.ward@example.com', selected: false }, // ADD: Random date
+  { name: 'Olivia King', role: 'Admin', email: 'olivia.king@example.com', selected: false }, // ADD: Random date
+  { name: 'James Brown', role: 'Staff', email: 'james.brown@example.com', selected: false }, // ADD: Random date
+  { name: 'Sophia Lee', role: 'IT', email: 'sophia.lee@example.com', selected: false }, // ADD: Random date
+  { name: 'Michael Scott', role: 'Admin', email: 'michael.scott@example.com',selected: false  }, // ADD: Random date
+  { name: 'Emma Watson', role: 'Staff', email: 'emma.watson@example.com', selected: false }, // ADD: Random date
+  { name: 'Liam Anderson', role: 'IT', email: 'liam.anderson@example.com', selected: false }, // ADD: Random date
+  { name: 'Charlotte Davis', role: 'Staff', email: 'charlotte.davis@example.com', selected: false }, // ADD: Random date
+  { name: 'Benjamin Harris', role: 'Admin', email: 'benjamin.harris@example.com',selected: false  }, // ADD: Random date
+  { name: 'Ava Moore', role: 'IT', email: 'ava.moore@example.com',selected: false  }, // ADD: Random date
 ])
 
 

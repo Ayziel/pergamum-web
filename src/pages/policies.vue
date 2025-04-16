@@ -10,22 +10,23 @@ interface Policies {
   description: string
   url: string
   lastUpdated: string
+  selected?: boolean // ADD: selection state for checkbox
 }
 
 const selectAll = ref(false)
 
 // CHANGED: Updated policy objects to match new interface
 const policies = reactive<Policies[]>([
-  { name: 'Data Retention Policy', description: 'Retention of company records', url: '/docs/data-retention', lastUpdated: '2024-12-01' }, // ADD: Random data
-  { name: 'Security Policy', description: 'System access and controls', url: '/docs/security', lastUpdated: '2024-11-15' }, // ADD: Random data
-  { name: 'Privacy Policy', description: 'Handling of personal information', url: '/docs/privacy', lastUpdated: '2024-10-20' }, // ADD: Random data
-  { name: 'IT Usage Policy', description: 'Acceptable use of IT resources', url: '/docs/it-usage', lastUpdated: '2024-09-10' }, // ADD: Random data
-  { name: 'HR Guidelines', description: 'HR-related procedures and rules', url: '/docs/hr-guidelines', lastUpdated: '2024-08-05' }, // ADD: Random data
-  { name: 'Incident Response Plan', description: 'Steps to handle security incidents', url: '/docs/incident-response', lastUpdated: '2024-07-25' }, // ADD: Random data
-  { name: 'Compliance Checklist', description: 'Regulatory compliance tasks', url: '/docs/compliance', lastUpdated: '2024-06-12' }, // ADD: Random data
-  { name: 'Network Access Policy', description: 'Rules for accessing the network', url: '/docs/network-access', lastUpdated: '2024-05-18' }, // ADD: Random data
-  { name: 'Remote Work Policy', description: 'Guidelines for remote employees', url: '/docs/remote-work', lastUpdated: '2024-04-30' }, // ADD: Random data
-  { name: 'Asset Management Policy', description: 'Tracking and managing IT assets', url: '/docs/asset-management', lastUpdated: '2024-04-01' }, // ADD: Random data
+  { name: 'Data Retention Policy', description: 'Retention of company records', url: '/docs/data-retention', lastUpdated: '2024-12-01', selected: false }, // ADD: Random data
+  { name: 'Security Policy', description: 'System access and controls', url: '/docs/security', lastUpdated: '2024-11-15', selected: false }, // ADD: Random data
+  { name: 'Privacy Policy', description: 'Handling of personal information', url: '/docs/privacy', lastUpdated: '2024-10-20', selected: false }, // ADD: Random data
+  { name: 'IT Usage Policy', description: 'Acceptable use of IT resources', url: '/docs/it-usage', lastUpdated: '2024-09-10', selected: false }, // ADD: Random data
+  { name: 'HR Guidelines', description: 'HR-related procedures and rules', url: '/docs/hr-guidelines', lastUpdated: '2024-08-05', selected: false }, // ADD: Random data
+  { name: 'Incident Response Plan', description: 'Steps to handle security incidents', url: '/docs/incident-response', lastUpdated: '2024-07-25', selected: false }, // ADD: Random data
+  { name: 'Compliance Checklist', description: 'Regulatory compliance tasks', url: '/docs/compliance', lastUpdated: '2024-06-12', selected: false }, // ADD: Random data
+  { name: 'Network Access Policy', description: 'Rules for accessing the network', url: '/docs/network-access', lastUpdated: '2024-05-18', selected: false }, // ADD: Random data
+  { name: 'Remote Work Policy', description: 'Guidelines for remote employees', url: '/docs/remote-work', lastUpdated: '2024-04-30', selected: false }, // ADD: Random data
+  { name: 'Asset Management Policy', description: 'Tracking and managing IT assets', url: '/docs/asset-management', lastUpdated: '2024-04-01', selected: false }, // ADD: Random data
 ])
 
 
