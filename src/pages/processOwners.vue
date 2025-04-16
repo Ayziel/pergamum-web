@@ -7,25 +7,26 @@ interface ProcessOwners {
   name: string
   role: string
   email: string
+  selected?: boolean // ADD: selection state for checkbox
 }
 
 const selectAll = ref(false)
 
 const processOwners = reactive<ProcessOwners[]>([
-  { name: 'David Ward', role: 'IT', email: 'david.ward@example.com' }, // ADD: Random date
-  { name: 'Olivia King', role: 'Admin', email: 'olivia.king@example.com' }, // ADD: Random date
-  { name: 'James Brown', role: 'Staff', email: 'james.brown@example.com' }, // ADD: Random date
-  { name: 'Sophia Lee', role: 'Manager', email: 'sophia.lee@example.com' }, // ADD: Random date
-  { name: 'Michael Scott', role: 'HR', email: 'michael.scott@example.com' }, // ADD: Random date
-  { name: 'Emma Watson', role: 'Admin', email: 'emma.watson@example.com' }, // ADD: Random date
-  { name: 'Liam Anderson', role: 'Staff', email: 'liam.anderson@example.com' }, // ADD: Random date
-  { name: 'Charlotte Davis', role: 'Manager', email: 'charlotte.davis@example.com' }, // ADD: Random date
-  { name: 'Benjamin Harris', role: 'HR', email: 'benjamin.harris@example.com' }, // ADD: Random date
-  { name: 'Ava Moore', role: 'IT', email: 'ava.moore@example.com' }, // ADD: Random date
-  { name: 'Lucas Green', role: 'Admin', email: 'lucas.green@example.com' }, // ADD: Random date
-  { name: 'Isabella Clark', role: 'Manager', email: 'isabella.clark@example.com' }, // ADD: Random date
-  { name: 'Ethan White', role: 'HR', email: 'ethan.white@example.com' }, // ADD: Random date
-  { name: 'Mia Harris', role: 'Staff', email: 'mia.harris@example.com' }, // ADD: Random date
+  { name: 'David Ward', role: 'IT', email: 'david.ward@example.com', selected: false }, // ADD: Random date
+  { name: 'Olivia King', role: 'Admin', email: 'olivia.king@example.com', selected: false }, // ADD: Random date
+  { name: 'James Brown', role: 'Staff', email: 'james.brown@example.com', selected: false }, // ADD: Random date
+  { name: 'Sophia Lee', role: 'Manager', email: 'sophia.lee@example.com', selected: false }, // ADD: Random date
+  { name: 'Michael Scott', role: 'HR', email: 'michael.scott@example.com', selected: false }, // ADD: Random date
+  { name: 'Emma Watson', role: 'Admin', email: 'emma.watson@example.com', selected: false }, // ADD: Random date
+  { name: 'Liam Anderson', role: 'Staff', email: 'liam.anderson@example.com', selected: false }, // ADD: Random date
+  { name: 'Charlotte Davis', role: 'Manager', email: 'charlotte.davis@example.com', selected: false }, // ADD: Random date
+  { name: 'Benjamin Harris', role: 'HR', email: 'benjamin.harris@example.com', selected: false }, // ADD: Random date
+  { name: 'Ava Moore', role: 'IT', email: 'ava.moore@example.com', selected: false }, // ADD: Random date
+  { name: 'Lucas Green', role: 'Admin', email: 'lucas.green@example.com', selected: false }, // ADD: Random date
+  { name: 'Isabella Clark', role: 'Manager', email: 'isabella.clark@example.com', selected: false }, // ADD: Random date
+  { name: 'Ethan White', role: 'HR', email: 'ethan.white@example.com', selected: false }, // ADD: Random date
+  { name: 'Mia Harris', role: 'Staff', email: 'mia.harris@example.com', selected: false }, // ADD: Random date
 ])
 
 // Define current page and page size
