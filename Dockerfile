@@ -2,19 +2,29 @@
 FROM node:18-alpine AS builder
 WORKDIR /app
 
+# Install only dev dependencies needed for build
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
-COPY . . 
+# Copy the rest of the code
+COPY . .
+
+# Build the app
 RUN npm run build
 
-# Serve using Node.js
+# Production image
 FROM node:18-alpine
 WORKDIR /app
 
+# Only bring in the dist folder and package info
 COPY --from=builder /app/dist ./dist
 COPY package*.json ./
-RUN npm ci --omit=dev  # Install only prod deps
 
+# Install only production dependencies
+RUN npm ci --omit=dev
+
+# Expose the port
 EXPOSE 5161
+
+# Serve the app
 CMD ["npx", "serve", "dist", "-l", "5161"]
