@@ -103,4 +103,5 @@ watch(paginatedUsers, () => {
 @use '@/styles/components/data-table'; 
 @use '@/styles/base/page';
 @use '@/styles/base/buttons';
+@use '@/styles/base/globals';
 </style>

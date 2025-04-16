@@ -7,7 +7,7 @@
       <form @submit.prevent="submitForm">
         <div class="form-group">
           <label>Document</label>
-          <input type="text" required />
+          <input type="text" placeholder="Document" required />
         </div>
 
         <!-- Category Dropdown -->
@@ -39,11 +39,11 @@
         <div class="form-row">
           <div class="form-group">
             <label>Description</label>
-            <input type="text" v-model="form.middleName" />
+            <input type="text" v-model="form.middleName" placeholder="Description" />
           </div>
           <div class="form-group">
             <label>URL</label>
-            <input type="text" v-model="form.lastName" required />
+            <input type="text" v-model="form.lastName" placeholder="URL" required />
           </div>
         </div>
 

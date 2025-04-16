@@ -9,33 +9,33 @@
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" v-model="form.email" required />
+              <input type="email" v-model="form.email" placeholder="Email" required />
             </div>
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" v-model="form.firstName" required />
+              <input type="text" v-model="form.firstName" placeholder="First Name" required />
             </div>
           </div>
   
           <div class="form-row">
             <div class="form-group">
               <label>Middle Name</label>
-              <input type="text" v-model="form.middleName" />
+              <input type="text" v-model="form.middleName" placeholder="Middle Name"/>
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" v-model="form.lastName" required />
+              <input type="text" v-model="form.lastName" placeholder="Last Name" required />
             </div>
           </div>
   
           <div class="form-row">
             <div class="form-group">
-              <label>Username</label>
-              <input type="text" v-model="form.username" required />
+              <label>Role</label>
+              <input type="text" v-model="form.username" placeholder="Role" required />
             </div>
             <div class="form-group">
               <label>Password</label>
-              <input type="password" v-model="form.password" required />
+              <input type="password" v-model="form.password" placeholder="Password" required />
             </div>
           </div>
   

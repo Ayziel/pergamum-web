@@ -2,12 +2,12 @@
     <div v-if="isVisible" class="modal-overlay" @click.self="closeModal">
       <div class="modal-content">
         <span class="close-btn" @click="closeModal">&times;</span>
-        <h2 class="modal-title">Add Board Approver</h2>
+        <h2 class="modal-title">Process Owners</h2>
   
         <form @submit.prevent="submitForm">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" required placeholder="Name"/>
+            <input type="text" required placeholder="Name" />
           </div>
 
           <div class="form-group">
@@ -57,7 +57,7 @@
             </div>
           </div> -->
   
-          <button type="submit" class="btn btn-primary">Add Board Approver</button>
+          <button type="submit" class="btn btn-primary">Add Document Owner</button>
         </form>
       </div>
     </div>
@@ -65,11 +65,6 @@
   
   <script lang="ts" setup>
   import { ref, watch } from 'vue'
-  
-  // ADD: Role dropdown setup
-const roleOptions = ['Admin', 'IT', 'Staff', 'Manager', 'Auditor']
-const selectedRole = ref('')
-
   
   const props = defineProps({
     isVisible: Boolean,
@@ -91,8 +86,10 @@ const selectedRole = ref('')
     'Breach',
     'Leak',
   ]
-  
-  const selectedCategory = ref('')
+
+ const roleOptions = ['Admin', 'IT', 'Staff', 'Manager', 'Auditor']
+ const selectedRole = ref('')
+ const selectedCategory = ref('')
   
   // Watch and push to categories when selected
   watch(selectedCategory, (newVal) => {

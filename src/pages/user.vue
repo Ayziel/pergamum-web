@@ -96,4 +96,5 @@ watch(paginatedUsers, () => {
 @use '@/styles/pages/user'; 
 @use '@/styles/base/page';
 @use '@/styles/base/buttons';
+@use '@/styles/base/globals';
 </style>

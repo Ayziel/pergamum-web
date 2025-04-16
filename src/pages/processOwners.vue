@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { reactive, ref, computed, watch } from 'vue'
 import RMF from '../modal/rmfmodal.vue'
+import ProcessOwners from '../modal/processOwnersModal.vue'
 const showModal = ref(false)
 
 interface ProcessOwners {
@@ -52,6 +53,7 @@ watch(paginatedUsers, () => {
 </script>
 
 <template>
+  <ProcessOwners :isVisible="showModal" @update:isVisible="showModal = $event" />
   <div class="card">
     <h1>PROCESS OWNER CATEGORY</h1>
     <hr />
@@ -99,4 +101,5 @@ watch(paginatedUsers, () => {
   @use '@/styles/components/data-table'; 
   @use '@/styles/base/page';
   @use '@/styles/base/buttons';
+  @use '@/styles/base/globals';
 </style>

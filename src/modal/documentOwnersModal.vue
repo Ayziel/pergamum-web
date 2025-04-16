@@ -7,7 +7,7 @@
         <form @submit.prevent="submitForm">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" required />
+            <input type="text" required placeholder="Name" />
           </div>
 
           <div class="form-group">
@@ -57,7 +57,7 @@
             </div>
           </div> -->
   
-          <button type="submit" class="btn btn-primary">Add RMF</button>
+          <button type="submit" class="btn btn-primary">Add Document Owner</button>
         </form>
       </div>
     </div>

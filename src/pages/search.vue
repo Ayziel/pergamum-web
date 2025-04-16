@@ -86,7 +86,8 @@ function submitForm() {
 </template>
 
 <style lang="scss" scoped>
-@use '@/styles/pages/search'; 
 @use '@/styles/base/page';
 @use '@/styles/base/buttons';
+@use '@/styles/pages/search'; 
+@use '@/styles/base/globals';
 </style>

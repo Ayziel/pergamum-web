@@ -34,7 +34,7 @@ function submitForm() {
 <template>
   <div class="card">
     <h2 class="title">Search Selection</h2>
-
+    <hr class="divider" />
     <div class="form-group search">
       <label>Search</label>
       <input type="text" placeholder="Type to search for Policies or Procedure" v-model="form.search" />
@@ -89,4 +89,5 @@ function submitForm() {
 @use '@/styles/pages/search'; 
 @use '@/styles/base/page';
 @use '@/styles/base/buttons';
+@use '@/styles/base/globals';
 </style>

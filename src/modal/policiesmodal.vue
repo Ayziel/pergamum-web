@@ -15,7 +15,7 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label>Document Code</label>
-                    <input type="text" v-model="form.documentCode" />
+                    <input type="text" v-model="form.documentCode" placeholder="####"/>
                   </div>
                   <div class="form-group">
                     <label>Category</label>
@@ -36,12 +36,12 @@
   
                 <div class="form-group">
                   <label>Description</label>
-                  <input type="text" v-model="form.description" />
+                  <input type="text" v-model="form.description" placeholder="Description"/>
                 </div>
   
                 <div class="form-group">
                   <label>URL</label>
-                  <input type="text" v-model="form.url" />
+                  <input type="text" v-model="form.url" placeholder="URL"/>
                 </div>
   
                 <!-- RMF Row -->
@@ -54,7 +54,7 @@
                   </div>
                   <div class="form-group">
                     <label>RMF Control ID</label>
-                    <input type="text" v-model="form.rmfControlId" />
+                    <input type="text" v-model="form.rmfControlId" placeholder="RMF Control ID"/>
                   </div>
                 </div>
   
@@ -68,7 +68,7 @@
                   </div>
                   <div class="form-group">
                     <label>Name</label>
-                    <input type="text" v-model="form.boardApproverName" />
+                    <input type="text" v-model="form.boardApproverName" placeholder="Name"/>
                   </div>
                 </div>
   
@@ -76,13 +76,13 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label>Process Owner</label>
-                    <select v-model="form.processOwner">
+                    <select v-model="form.processOwner" placeholder="Process Owner">
                       <option>Process Owner</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label>Name</label>
-                    <input type="text" v-model="form.processOwnerName" />
+                    <input type="text" v-model="form.processOwnerName" placeholder="Name"/>
                   </div>
                 </div>
   
@@ -90,13 +90,13 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label>Document Approver</label>
-                    <select v-model="form.documentApprover">
+                    <select v-model="form.documentApprover" placeholder="Document Approver">
                       <option>Approver Name</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label>Name</label>
-                    <input type="text" v-model="form.documentApproverName" />
+                    <input type="text" v-model="form.documentApproverName" placeholder="Name"/>
                   </div>
                 </div>
   
