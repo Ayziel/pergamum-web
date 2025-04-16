@@ -99,10 +99,10 @@ const onLeave = (el: Element) => {
 
           <!-- ADD: RMF -->
           <li class="navigation-item" @click="handleNavItemClick">
-            <a href="#" class="navigation-link">
+            <router-link to="/rmf" class="navigation-link">
               <i class="bx bx-shield-quarter"></i>
               <span class="navigation-label">RMF</span>
-            </a>
+            </router-link>
           </li>
 
           <!-- ADD: Control ID -->
@@ -115,10 +115,10 @@ const onLeave = (el: Element) => {
 
           <!-- ADD: Policies -->
           <li class="navigation-item" @click="handleNavItemClick">
-            <a href="#" class="navigation-link">
+            <router-link to="/policies" class="navigation-link">
               <i class="bx bx-file"></i>
               <span class="navigation-label">Policies</span>
-            </a>
+            </router-link>
           </li>
 
           <li class="navigation-item has-dropdown">
@@ -132,9 +132,9 @@ const onLeave = (el: Element) => {
               @leave="onLeave"
             >
               <ul v-show="isDepartmentOpen" class="dropdown-menu">
-                <li><a href="#" class="dropdown-link">Board Approvers</a></li>
-                <li><a href="#" class="dropdown-link">Process Owners</a></li>
-                <li><a href="#" class="dropdown-link">Document Owners</a></li>
+                <li><router-link to="/boardApprovers" class="dropdown-link">Board Approvers</router-link></li>
+                <li><router-link to="/processOwners" class="dropdown-link">Process Owners</router-link></li>
+                <li><router-link to="/documentOwners" class="dropdown-link">Document Owners </router-link></li>
               </ul>
             </transition>
           </li>

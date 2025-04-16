@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref, computed, watch } from 'vue'
-import UserModal from '../modal/usermodal.vue'
+import RMF from '../modal/rmfmodal.vue'
 const showModal = ref(false)
 
 interface RMF {
@@ -14,14 +14,18 @@ interface RMF {
 const selectAll = ref(false)
 
 const rmf = reactive<RMF[]>([
-  { name: 'John Doe', description: 'Admin', rmfExternalURL: 'IT', lastUpdate: '2024-11-20', selected: false }, // ADD: Random date
-  { name: 'Jane Smith', description: 'User', rmfExternalURL: 'HR', lastUpdate: '2024-10-05', selected: false }, // ADD: Random date
-  { name: 'Alice Ray', description: 'Manager', rmfExternalURL: 'Finance', lastUpdate: '2024-12-12', selected: false }, // ADD: Random date
-  { name: 'Bob Alton', description: 'Staff', rmfExternalURL: 'Sales', lastUpdate: '2025-01-30', selected: false }, // ADD: Random date
-  { name: 'Eve Bright', description: 'Supervisor', rmfExternalURL: 'IT', lastUpdate: '2024-09-17', selected: false }, // ADD: Random date
-  { name: 'Mark Hill', description: 'HR', rmfExternalURL: 'HR', lastUpdate: '2024-08-01', selected: false }, // ADD: Random date
-  { name: 'Sophia Stone', description: 'Admin', rmfExternalURL: 'Legal', lastUpdate: '2025-02-10', selected: false }, // ADD: Random date
+  { name: 'David Ward', description: 'Responsible for overseeing organizational management and operations.', rmfExternalURL: 'https://example.com/finance', lastUpdate: '2025-03-01', selected: false }, // ADD: Random date
+  { name: 'Olivia King', description: 'Leads the marketing team and develops strategies for market growth.', rmfExternalURL: 'https://example.com/marketing', lastUpdate: '2024-07-15', selected: false }, // ADD: Random date
+  { name: 'James Brown', description: 'Supports sales efforts, manages customer relations, and drives revenue.', rmfExternalURL: 'https://example.com/sales', lastUpdate: '2025-01-10', selected: false }, // ADD: Random date
+  { name: 'Sophia Lee', description: 'Handles HR tasks, employee relations, and ensures compliance with labor laws.', rmfExternalURL: 'https://example.com/hr', lastUpdate: '2024-11-20', selected: false }, // ADD: Random date
+  { name: 'Michael Scott', description: 'Manages and oversees legal matters, ensuring compliance and risk management.', rmfExternalURL: 'https://example.com/legal', lastUpdate: '2024-10-03', selected: false }, // ADD: Random date
+  { name: 'Emma Watson', description: 'Maintains IT infrastructure, supports tech systems, and handles technical issues.', rmfExternalURL: 'https://example.com/it', lastUpdate: '2024-12-01', selected: false }, // ADD: Random date
+  { name: 'Liam Anderson', description: 'Oversees the team in ensuring smooth processes and continuous improvement.', rmfExternalURL: 'https://example.com/hr', lastUpdate: '2025-02-28', selected: false }, // ADD: Random date
+  { name: 'Charlotte Davis', description: 'Develops marketing campaigns and strategies to engage customers and drive sales.', rmfExternalURL: 'https://example.com/marketing', lastUpdate: '2024-09-10', selected: false }, // ADD: Random date
+  { name: 'Benjamin Harris', description: 'Works in sales operations and supports account management to achieve sales targets.', rmfExternalURL: 'https://example.com/sales', lastUpdate: '2024-08-15', selected: false }, // ADD: Random date
+  { name: 'Ava Moore', description: 'Leads legal projects and provides legal advice to ensure company policy compliance.', rmfExternalURL: 'https://example.com/legal', lastUpdate: '2025-01-25', selected: false }, // ADD: Random date
 ])
+
 
 
 
@@ -48,7 +52,7 @@ watch(paginatedUsers, () => {
 </script>
 
 <template>
-  <UserModal :isVisible="showModal" @update:isVisible="showModal = $event" />
+  <RMF :isVisible="showModal" @update:isVisible="showModal = $event" />
   <div class="card">
     <h1>RISK MANAGEMENT FRAMEWORK NAMES</h1>
     <hr />

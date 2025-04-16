@@ -12,14 +12,18 @@ interface User {
 const selectAll = ref(false)
 
 const users = reactive<User[]>([
-  { name: 'John Doe', role: 'Admin', department: 'IT', selected: false },
-  { name: 'Jane Smith', role: 'User', department: 'HR', selected: false },
-  { name: 'Alice Ray', role: 'Manager', department: 'Finance', selected: false },
-  { name: 'Bob Alton', role: 'Staff', department: 'Sales', selected: false },
-  { name: 'Eve Bright', role: 'Supervisor', department: 'IT', selected: false },
-  { name: 'Mark Hill', role: 'HR', department: 'HR', selected: false },
-  { name: 'Sophia Stone', role: 'Admin', department: 'Legal', selected: false },
+  { name: 'David Ward', role: 'Admin', department: 'Board Approvers', selected: false }, // ADD: Random date
+  { name: 'Olivia King', role: 'Manager', department: 'Process Owners', selected: false }, // ADD: Random date
+  { name: 'James Brown', role: 'Staff', department: 'Document Owners', selected: false }, // ADD: Random date
+  { name: 'Sophia Lee', role: 'Manager', department: 'Board Approvers', selected: false }, // ADD: Random date
+  { name: 'Michael Scott', role: 'Admin', department: 'Process Owners', selected: false }, // ADD: Random date
+  { name: 'Emma Watson', role: 'Manager', department: 'Document Owners', selected: false }, // ADD: Random date
+  { name: 'Liam Anderson', role: 'Staff', department: 'Board Approvers', selected: false }, // ADD: Random date
+  { name: 'Charlotte Davis', role: 'Manager', department: 'Process Owners', selected: false }, // ADD: Random date
+  { name: 'Benjamin Harris', role: 'Staff', department: 'Document Owners', selected: false }, // ADD: Random date
+  { name: 'Ava Moore', role: 'Admin', department: 'Board Approvers', selected: false }, // ADD: Random date
 ])
+
 
 // Define current page and page size
 const currentPage = ref(1)
