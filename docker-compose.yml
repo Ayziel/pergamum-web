@@ -1,3 +1,5 @@
+version: '3.8'  # Make sure you have a version specified
+
 services:
   app:
     build:
@@ -12,8 +14,3 @@ services:
     # Remove MONGO_URL since you're not connecting to MongoDB yet
     # environment:
     #   - MONGO_URL=mongodb://pergamum_db:27017/pergamum
-
-# Removed the db service since you're not using MongoDB now
-
-# volumes:
-#   pergamum_mongodb_data:  # Removed as there's no database
