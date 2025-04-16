@@ -23,6 +23,7 @@
   .form-group {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 1rem;
     width: 50%;
   }
@@ -82,4 +83,25 @@
 
   .rmf-code {
     width: 30%;
+  }
+
+  input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    accent-color: #006eff; // Green color
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 10px;
+    &:checked {
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+    }
+  }
+  
+  .check {
+    display: flex;
+    width: 150px;
+  }
+
+  .Names {
+    width: 80%;
   }

@@ -9,6 +9,7 @@ import boardApprovers from '../pages/boardApprovers.vue'
 import documentOwners from '../pages/documentOwners.vue'
 import processOwner from '../pages/processOwners.vue'
 import clients from '../pages/clients.vue'
+import controlID from '../pages/controlID.vue'  
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/documentOwners', name: 'DocumentOwners', component: documentOwners },
   { path: '/processOwners', name: 'ProcessOwners', component: processOwner },
   { path: '/clients', name: 'Clients', component: clients },
+  { path: '/controlID', name: 'ControlID', component: controlID },
 ]
 
 const router = createRouter({

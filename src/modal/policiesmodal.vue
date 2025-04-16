@@ -15,7 +15,7 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label>Document Code</label>
-                    <input type="text" v-model="form.documentCode" placeholder="####"/>
+                    <input type="text" v-model="form.documentCode" />
                   </div>
                   <div class="form-group">
                     <label>Category</label>
@@ -36,12 +36,12 @@
   
                 <div class="form-group">
                   <label>Description</label>
-                  <input type="text" v-model="form.description" placeholder="Description"/>
+                  <input type="text" v-model="form.description" />
                 </div>
   
                 <div class="form-group">
                   <label>URL</label>
-                  <input type="text" v-model="form.url" placeholder="URL"/>
+                  <input type="text" v-model="form.url" />
                 </div>
   
                 <!-- RMF Row -->
@@ -54,52 +54,59 @@
                   </div>
                   <div class="form-group">
                     <label>RMF Control ID</label>
-                    <input type="text" v-model="form.rmfControlId" placeholder="RMF Control ID"/>
+                    <input type="text" v-model="form.rmfControlId" />
                   </div>
                 </div>
   
                 <!-- Board Approver -->
                 <div class="form-row">
-                  <div class="form-group">
+                  <div class="form-group check">
                     <label>Board Approver</label>
-                    <select v-model="form.boardApprover">
-                      <option>Board Approver</option>
+                    <input type="checkbox" v-model="form.boardApprover" />
+                  </div>
+                  <div class="form-group Names">
+                    <label>Name</label>
+                    <select v-model="form.boardApproverName" :disabled="!form.boardApprover">
+                      <option value="">Select Name</option>
+                      <option value="Name 1">Name 1</option>
+                      <option value="Name 2">Name 2</option>
+                      <option value="Name 3">Name 3</option>
+                      <!-- Add more options as needed -->
                     </select>
                   </div>
-                  <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" v-model="form.boardApproverName" placeholder="Name"/>
-                  </div>
                 </div>
-  
-                <!-- Process Owner -->
                 <div class="form-row">
-                  <div class="form-group">
-                    <label>Process Owner</label>
-                    <select v-model="form.processOwner" placeholder="Process Owner">
-                      <option>Process Owner</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" v-model="form.processOwnerName" placeholder="Name"/>
-                  </div>
-                </div>
-  
-                <!-- Document Approver -->
-                <div class="form-row">
-                  <div class="form-group">
+                  <div class="form-group check">
                     <label>Document Approver</label>
-                    <select v-model="form.documentApprover" placeholder="Document Approver">
-                      <option>Approver Name</option>
+                    <input type="checkbox" v-model="form.documentApprover" />
+                  </div>
+                  <div class="form-group Names">
+                    <label>Name</label>
+                    <select v-model="form.documentApproverName" :disabled="!form.documentApprover">
+                      <option value="">Select Name</option>
+                      <option value="Name 1">Name 1</option>
+                      <option value="Name 2">Name 2</option>
+                      <option value="Name 3">Name 3</option>
+                      <!-- Add more options as needed -->
                     </select>
                   </div>
-                  <div class="form-group">
+                </div>
+                <div class="form-row">
+                  <div class="form-group check">
+                    <label>Process Owners</label>
+                    <input type="checkbox" v-model="form.processOwner" />
+                  </div>
+                  <div class="form-group Names">
                     <label>Name</label>
-                    <input type="text" v-model="form.documentApproverName" placeholder="Name"/>
+                    <select v-model="form.processOwnerName" :disabled="!form.processOwner">
+                      <option value="">Select Name</option>
+                      <option value="Name 1">Name 1</option>
+                      <option value="Name 2">Name 2</option>
+                      <option value="Name 3">Name 3</option>
+                      <!-- Add more options as needed -->
+                    </select>
                   </div>
                 </div>
-  
                 <button class="save-btn">Save</button>
               </form>
             </div>
@@ -149,6 +156,13 @@
   </script>
   
   <style scoped>
+
+/* styles.css */
+
+
+
+
+
   template {
     background-color: none;
   }
@@ -273,5 +287,29 @@
   .open-modal-btn:hover {
     background-color: #0056b3;
   }
+
+  input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  accent-color: #006eff; /* Green color */
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.check {
+  display: flex;
+  width: 150px;
+}
+
+.Names {
+  flex: 5;
+  width: 80%;
+}
+
   </style>
   

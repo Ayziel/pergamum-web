@@ -107,10 +107,10 @@ const onLeave = (el: Element) => {
 
           <!-- ADD: Control ID -->
           <li class="navigation-item" @click="handleNavItemClick">
-            <a href="#" class="navigation-link">
+            <router-link to="/controlID" class="navigation-link">
               <i class="bx bx-lock-alt"></i>
               <span class="navigation-label">Control ID</span>
-            </a>
+            </router-link>
           </li>
 
           <!-- ADD: Policies -->

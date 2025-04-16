@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, watch } from 'vue'
 
 const form: Record<string, string> = reactive({
   search: '',
@@ -28,6 +28,15 @@ const approvers = [
 function submitForm() {
   console.log('Submitted:', form)
 }
+
+approvers.forEach(({ role }) => {
+  watch(
+    () => form[role],
+    (val) => {
+      if (!val) form[`${role}Name`] = ''
+    }
+  )
+})
 </script>
 
 
@@ -55,21 +64,20 @@ function submitForm() {
     </div>
 
     <div v-for="section in approvers" :key="section.role" class="form-row">
-      <div class="form-group">
-        <label>{{ section.label }}</label>
-        <select v-model="form[section.role]">
-          <option disabled value="">Select {{ section.label }}</option>
-          <option v-for="item in section.options" :key="item">{{ item }}</option>
-        </select>
+      <div class="form-group check">
+        <p>{{ section.label }}</p>
+        <input type="checkbox" v-model="form[section.role]" />
       </div>
-      <div class="form-group">
+      <div class="form-group Names">
         <label>Name</label>
-        <select v-model="form[`${section.role}Name`]">
+        <select v-model="form[`${section.role}Name`]"
+        :disabled="!form[section.role]" >
           <option disabled value="">Select Name</option>
           <option v-for="name in names" :key="name">{{ name }}</option>
         </select>
       </div>
     </div>
+
     <hr />
     <div class="rmf-section">
         <div class="rmf-name">
